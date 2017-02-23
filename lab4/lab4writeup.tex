@@ -97,7 +97,9 @@ a 10mH inductor which was confirmed by the TA.
 \begin{tabular}{|c|c|c|c|}
 \hline
 Frequency & Period & Voltage & Phase Angle\\
-DC & $\mu{}s$ & mV & degree\\
+Hz & $\mu{}s$ & mV & degree\\
+\hline
+5V DC & 0 & 115 & 0\\
 \hline
 103Hz & 500 & 324 & 18.54\\
 \hline
@@ -151,7 +153,9 @@ The inductor has a value of $71mH$ and the resistor a value of $724\Omega$.
 \begin{tabular}{|c|c|c|c|}
 \hline
 Frequency & Period & Voltage & Phase Angle\\
-DC & $\mu{}s$ & V & degree\\
+Hz & $\mu{}s$ & V & degree\\
+\hline
+5V DC & 0 & 1.77 & 0\\
 \hline
 250Hz & 160 & 1.96 & 14.4\\
 \hline
@@ -195,7 +199,7 @@ a resistor or a capacitor.
 %BEGIN SIMON
 \item Using the oscilloscope, compare sinusoid from voltage source to voltage measured
 across the box to find the time delay. The phase angle of the voltage across the box can
-be determined by $\angle{} = (360)(freq in Hz)(\Delta{} t)$. Note the peak voltage across
+be determined by $\angle{} = (360)(Hz)(\Delta{} t)$. Note the peak voltage across
 the box. 
 \item Find the current through the resistor by dividing the voltage across the resistor
 (with appropriate phase angle) by the known resistor value. The components are in series
@@ -207,7 +211,9 @@ reactance. Divide by the frequency of the voltage source to find the value of yo
 component. 
 \end{enumerate}
 
+\begin{flushleft}
 $3)$
+\\
 Comparisons based on frequency lead us to a couple conclusions. The first and most obvious 
 conclusion we can note is that it is not simply a resistor inside either box, as response varies 
 dependant on frequency. When observed at extremely high or low frequencies, we can distinguish
@@ -217,6 +223,8 @@ encouraged to operate within a median frequency range, as the distortion experei
 real and simulated data increases as you extend to extreme high or low frequency. A simulation 
 might still return a valid piece of data at 100,000 Hz but real observed data is likely to 
 be heavily flawed. 
+\end{flushleft}
 %END SIMON
+
 
 \end{document}
