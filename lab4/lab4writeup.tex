@@ -23,17 +23,68 @@
 \graphicspath{ {images/} }
 
 %Change # to correct lab number!
-\title{Chapter # Lab Writeup}
+\title{Chapter 4 Lab Writeup}
 \author{Zach Thompson, Simon Hannes, Kyle Peterson}
 \begin{document}
 
 \maketitle{}
 
 \section*{Overview}
+%BEGIN SIMON
+\paragraph{}
+The purpose of this lab is to determine which components are within the Mystery
+Boxes.The first box examined contained one component while the second contained
+two components in series. 
+%END SIMON
 
 \section*{Process}
+%BEGIN SIMON
+\paragraph{}
+To determine the content of the boxes, we connected a 1k resistor in series
+to the boxes, applied a DC voltage to the box and resistor, and measured the
+result. We noted the voltage response across the resistor and across the box.
+As expected, the sum of these two voltages was equal to the voltage applied.
+We then divided the voltage drop across the resistor by the known value of
+the resistor to determine current. All components are in series, and thus the
+current through the resistor is equal to the current through the box. Impedence
+of the box can then be determined by dividing voltage drop across the box by
+the current of the circuit. We then applied an AC current at five different
+frequencies and determined the phase difference of the resultant voltage drop
+vs the original applied voltage. We varied the frequency to produce an
+approximately $\angle{}45^\circ{}$ difference.
+%END SIMON
 
 \section*{Results}
+%BEGIN SIMON
+\paragraph{}
+Here are the numerical results we found for each respective box.
+
+\subsection*{Box: Mercedes Benz}
+\paragraph{}
+We began by testing the resistor for accuracy using the multimeter and found
+it to be $979\Omega{}$. We also tested the box alone for resisitivity and found
+a very small value, suggesting an inductor. We connected a $5V$ DC power supply
+to the resistor and box in series, and set the multimeter to voltage mode. We
+found a $4.8V$ drop across the resistor and a $115mV$ drop across the box. Next,
+we connected a $5V$ AC source at $1KHz$ cooresponding to a source sinusoid of
+$5\cos{}(2000\pi{} t)$. The time delay between the source voltage and voltage 
+measured across the box was found to be $190\mu{} s$.The phase shift is then 
+given by: $\angle{} = 360^\circ{}(1000Hz)(190\mu{}) = 68.4^\circ{}$. 
+
+\paragraph{} 
+Next we found the voltage across the resistor by subtracting voltage drop across
+the box from the source voltage:
+$5\angle{}0^\circ{} - 0.28\angle{}68.4^\circ{} = 4.90\angle{}-3.04^\circ{}$ By
+dividing this result by the measured resistor value of $979\Omega$ we yield a 
+series current of $0.005\angle{}-3.04^\circ{}A$. Overall impedance can now be 
+found by dividing voltage drop across the box by the current through the series
+components: 
+$Zb= -0.28\angle{}68.4^\circ{} / 0.005\angle{}-3.04^\circ{} = 55.90\angle{}71.44^\circ{}$.
+Since we're looking for the non-real component of impedence corresponding to what 
+we believe to be an inductor, we take $55.90\sin{}71.44^\circ{} = 52.99 = wl$ 
+dividing by $2000\pi{}$ yields $l=8.4mH$. We estimated that this was probably
+a 10mH inductor which was confirmed by the TA.   
+%END SIMON
 
 \section*{Conclusion}
 
