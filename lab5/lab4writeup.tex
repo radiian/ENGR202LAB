@@ -52,6 +52,21 @@ a logarithmic scaled graph.
 \section*{Results}
 
 \section*{Conclusion}
+%BEGIN KYLE
+\paragraph{}
+The first filter is a low pass filter. We can determine this from just the first value of $10Hz$ which has a 
+$V_\{out\} = V_\{in\}$ with a phase shift of zero. Then as the frequency increases $V_\{out\}$ decreases. That
+voltage to frequency response is what would be expected from a low pass filter.
+\paragraph{}
+The second filter is a high pass filter. Unlike the first filter it starts with a $V_\{out\} = 0$ at a low frequency
+ then increases until $V_\{out\} = V_\{in\}$ at a high frequency. We can conclude that the result is as would be 
+ expeced from a high pass filter.
+ \paragraph{}
+ The third and final filter is a band pass filter. A Band pass has low voltage outputs at bioth low and high frequencies 
+ with a notable peak around the center. Our data actually has two peaks, one being much smaller than the other. This 
+ is most likely caused by some sort of wrap around in relation to the phase response of the circuit. We can then conclude
+ that the filter is a band pass because the voltages at the low and high frequencies was zero.
+ %END KYLE
 
 \section*{Study Questions}
 
