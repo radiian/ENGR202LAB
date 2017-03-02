@@ -58,16 +58,54 @@ Our Voltage in is a constant 8V for all three filters. This Means that the corne
  sharply as frequency continues to climb. In filter three, two corner frequencies can be found at ~700 Hz and ~1000 Hz, 
  with greatly dimished voltages recorded below 700 Hz and above 1000 Hz. 
 %END SIMON
+The corner frequency is found when the output voltage is equal to 5.656V.
+\newline
+Low Pass Filter: $F_{3db} = 1.7kHz, Phase Shift = 48.96^{\circ}$
+\newline
+High Pass Filter: $F_{3db} = 23kHz, Phase Shift = 66.24^{\circ}$
+\newline
+Band Pass Filter: $F_{3db} = 1.1kHz, Phase Shift = 39.6^{\circ}$
+and $F_{3db} = 1.5kHz, Phase Shift = 54^{\circ}$
+
+%ZACH ADDING GRAPHS
+\begin{figure}[!ht]
+\caption{Band Pass Filter}
+\begin{center}
+\include{bandpass}
+\includegraphics{BandPass.png}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\caption{High Pass Filter}
+\begin{center}
+\include{highpass}
+\includegraphics{HighPass.png}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\caption{Low Pass Filter}
+\begin{center}
+\include{lowpass}
+\includegraphics{LowPass.png}
+\end{center}
+\end{figure}
+
+\clearpage
+%END ZACH ADD GRAPHS
 
 \section*{Conclusion}
 %BEGIN KYLE
 \paragraph{}
 The first filter is a low pass filter. We can determine this from just the first value of $10Hz$ which has a 
-$V_\{out\} = V_\{in\}$ with a phase shift of zero. Then as the frequency increases $V_\{out\}$ decreases. That
+$V_{out} = V_{in}$ with a phase shift of zero. Then as the frequency increases $V_{out}$ decreases. That
 voltage to frequency response is what would be expected from a low pass filter.
 \paragraph{}
-The second filter is a high pass filter. Unlike the first filter it starts with a $V_\{out\} = 0$ at a low frequency
- then increases until $V_\{out\} = V_\{in\}$ at a high frequency. We can conclude that the result is as would be 
+The second filter is a high pass filter. Unlike the first filter it starts with a $V_{out} = 0$ at a low frequency
+ then increases until $V_{out} = V_{in}$ at a high frequency. We can conclude that the result is as would be 
  expeced from a high pass filter.
  \paragraph{}
  The third and final filter is a band pass filter. A Band pass has low voltage outputs at bioth low and high frequencies 
