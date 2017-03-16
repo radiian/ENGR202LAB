@@ -1,0 +1,92 @@
+%Writeup for ENGR202 Lab 6 
+%If editing in vim/vi please insert your own line breaks! This will help keep the file cleaner and easier to edit.
+
+%::Collaboration etiquette::
+%In order to better identify changes
+%please surround all edits with your
+%name as follows:
+
+%BEGIN Zach
+%END Zach
+
+%LaTeX will ignore line breaks so to denote
+%changes in the middle of a line begin the
+%edits on a new line after your name tag
+%and then continue with the original on
+%the next line following your ending name
+%tag.
+
+
+
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+%Change # to correct lab number!
+\title{Chapter #6 Lab Writeup}
+\author{Zach Thompson, Simon Hannes, Kyle Peterson}
+\begin{document}
+
+\maketitle{}
+
+%BEGIN SIMON
+\section*{Introduction}
+The goal of this Lab is to put together all the information we've amassed 
+during the last 9 weeks of class in building a filter network with three
+distinct filters catered to specific types of speakers. These filters will
+be:
+\begin{enumerate}
+\item a low pass filter designed for use with a subwoofer
+\item a bandpass filter designed for use with the speaker provided in our lab kits
+\item a high pass filter designed for use with a tweeter
+\end{enumerate}
+
+We then will connect this filter network to appropriate amplification for each 
+filter, and out to the speakers. In addition, we will make the system mobile
+ and add in a potentiometer to vary the volume, plus an LED to show when the 
+network is receiving power.
+
+\section*{Design}
+The capacitors available for use were $0.1\mu F$, $1\mu F$ and $10\mu F$. We 
+were warned against using resistor values of less than $100\Omega$.
+
+The first consideration we made was determining the frequency range which 
+we hoped to encompass by each filter. We used cutoff frequencies of 200Hz
+for the low pass, 6kHz for the high pass, and 500Hz, 5kHz for the band-pass.
+We used the equation: $Fcutoff = 1/(2\pi*RC)$ to determine capacitor and 
+resistor values for each filter. Our initial guesses were shown to be fairly 
+functional when modeled in LTSpice, with the exception of the band-pass which 
+needed slight modification to achieve an amplitude which matched the amplitude 
+created by the other two  filters. To do this, we increased the resistance
+in the high-pass section of  the band-pass, and lowered the attached capacitor
+by a factor of ten. The values are as follows:
+\begin{enumerate}
+\item LOW-PASS: $200Hz=795\mu seconds$. We chose a $1\mu$ capacitor and 
+$795\Omega$ worth of resistors.
+\item HIGH-PASS: $6kHz=27\mu seconds$. We chose a $0.1\mu$ capacitor and 
+$270\Omega$ worth of resistors. 
+\item BAND-PASS: For the low-end, we found $400Hz=40\mu seconds$. We chose a $0.1\mu$ capacitor and $400\Omega$ worth of resistors. For the high-end, we found
+$2kHz=20\mu seconds$. For this we chose a $0.1\mu$ capacitor and $2000\Omega$
+worth of resistors.
+\end{enumerate}
+%END SIMON
+
+\section*{Simulations and Testing}
+
+\section*{Results}
+
+\section*{Conclusion}
+
+%BEGIN SIMON
+\section*{Extra Credit}
+We added in several extra components to increase the functionality of the 
+device including:
+\begin{enumerate}
+\item An LED to show when the device is powered
+\item A fan to deal with heat created by the amps which were found to be in
+ excess of 110 degrees.
+\item A potentiometer installed before the filters in the signal path to 
+control volume.
+\end{enumerate}
+%END SIMON
+\end{document}
