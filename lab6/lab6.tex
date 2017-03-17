@@ -73,8 +73,55 @@ worth of resistors.
 %END SIMON
 
 \section*{Simulations and Testing}
+<<<<<<< HEAD
 
 %BEGIN SIMON
+=======
+%BEGIN KYLE
+\begin{figure}[!h]
+\centering
+\caption{Schematic}
+\includegraphics[scale=.5]{lab6_spice_schematic}
+\caption{Simulation Results}
+\includegraphics[width=\linewidth]{lab6_spice_graph}
+\end{figure}
+
+\begin{figure}[!ht]
+\caption{Data Table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Freq (Hz)&Vin(V)&High(mV)&Mid(mV)&Low(mV)\\
+\hline
+10&5&14.4&72&2000\\
+\hline
+30&5&28&196&2000\\
+\hline
+100&5&92&664&2000\\
+\hline
+300&5&200&1380&2000\\
+\hline
+1000&5&600&2000&849\\
+\hline
+3000&5&1120&1720&150\\
+\hline
+10000&5&1560&640&86\\
+\hline
+30000&5&1560&240&50\\
+\hline
+\end{tabular}
+\begin{flushleft}
+We had trouble with the osciloscope clipping at 2V, so we do not have data above 2V. To help combat this issue the function generator was set to 256mV rather than 1V.
+\end{flushleft}
+\end{center}
+\end{figure}
+\begin{figure}[!h]
+\centering
+\caption{Magnitude Vs Frequency}
+\includegraphics[width=\linewidth]{magnitudevsfrequency}
+\end{figure}
+%END KYLE
+>>>>>>> 702e19e874745e2248b3bd0f3907afd7ee5d0a77
 \section*{Results}
 We succeeded in creating a 3 stage filter network which plays music out of 
 three different speakers. Huzzah! It was satisfying to see the final result
@@ -111,6 +158,7 @@ device including:
 \item An on and off switch for the signal. 
 \item A potentiometer installed before the filters in the signal path to 
 control volume.
+\item Powered the circuit via a 5V battery pack.
 \end{enumerate}
 %END SIMON
 \end{document}
