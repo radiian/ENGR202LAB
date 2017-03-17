@@ -61,23 +61,46 @@ created by the other two  filters. To do this, we increased the resistance
 in the high-pass section of  the band-pass, and lowered the attached capacitor
 by a factor of ten. The values are as follows:
 \begin{enumerate}
-\item LOW-PASS: $200Hz=795\mu seconds$. We chose a $1\mu$ capacitor and 
+\item LOW-PASS: $200Hz=795\mu$ seconds. We chose a $1\mu$ capacitor and 
 $795\Omega$ worth of resistors.
-\item HIGH-PASS: $6kHz=27\mu seconds$. We chose a $0.1\mu$ capacitor and 
+\item HIGH-PASS: $6kHz=27\mu$ seconds. We chose a $0.1\mu$ capacitor and 
 $270\Omega$ worth of resistors. 
-\item BAND-PASS: For the low-end, we found $400Hz=40\mu seconds$. We chose a $0.1\mu$ capacitor and $400\Omega$ worth of resistors. For the high-end, we found
-$2kHz=20\mu seconds$. For this we chose a $0.1\mu$ capacitor and $2000\Omega$
+\item BAND-PASS: For the low-end, we found $400Hz=40\mu$ seconds. We chose a 
+$0.1\mu$ capacitor and $400\Omega$ worth of resistors. For the high-end, we found
+$2kHz=20\mu$ seconds. For this we chose a $0.1\mu$ capacitor and $2000\Omega$
 worth of resistors.
 \end{enumerate}
 %END SIMON
 
 \section*{Simulations and Testing}
 
+%BEGIN SIMON
 \section*{Results}
+We succeeded in creating a 3 stage filter network which plays music out of 
+three different speakers. Huzzah! It was satisfying to see the final result
+of our effort. In conclusion, we found great success in this project, from design, 
+to consruction, to testing. We found results which matched our expectations 
+from design. 
+
+Thankfully, all the issues we encountered were overcome with a bit of effort. 
+After constructing the filter network, we attempted to power it using the 
+power supply that Simon had constructed in ECE 112, resulting in a very noisy 
+signal. We added an inductor inline before the board and the noise was 
+neutralized. We noticed the amps were running very hot, so we added a fan and 
+some heat sync glue to draw off excess heat. 
+
 
 \section*{Conclusion}
+We began by setting cutoff values from speaker output values. We used these 
+cutoff values to determine resistor and capcitor values. We then had 
+everything we needed to construct the circuit. We made a mock-up on a 
+breadboard to test that our design worked, which it did. We then handed 
+over the reins to our master solder-tech, Zach, who did a marvellous 
+job of connecting the components in a compact and organized way. With 
+the final product fully cocnstructed, we just some final testing to 
+make sure that everything worked as expected. If we were able to do this 
+project again, there isn't much we would change. 
 
-%BEGIN SIMON
 \section*{Extra Credit}
 We added in several extra components to increase the functionality of the 
 device including:
@@ -85,6 +108,7 @@ device including:
 \item An LED to show when the device is powered
 \item A fan to deal with heat created by the amps which were found to be in
  excess of 110 degrees.
+\item An on and off switch for the signal. 
 \item A potentiometer installed before the filters in the signal path to 
 control volume.
 \end{enumerate}
